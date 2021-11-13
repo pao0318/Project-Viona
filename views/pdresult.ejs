@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Try On!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" /> -->
+
+    <!-- Box icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- Glidejs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css"
+    />
+    <!-- Custom StyleSheet -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Lakmé 9to5 Foundation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--scriptmlfecth-->
+    <!-- <script src="js/js/testml.js></script>-->
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="navigation container">
+        <div class="logo">
+          <h1>Route Mobile</h1>
+        </div>
+
+        <div class="menu">
+          <div class="top-nav">
+            <div class="logo">
+              <h1>Route Mobile</h1>
+            </div>
+            <div class="close">
+              <i class="bx bx-x"></i>
+            </div>
+          </div>
+
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="product.html" class="nav-link">Products</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="#account" class="nav-link">Account</a>
+            </li>
+            <li class="nav-item">
+              <a href="cart.html" class="nav-link icon"
+                ><i class="bx bx-shopping-bag"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+
+        <a href="cart.html" class="cart-icon">
+          <i class="bx bx-shopping-bag"></i>
+        </a>
+
+        <div class="hamburger">
+          <i class="bx bx-menu"></i>
+        </div>
+      </div>
+    </nav>
+    <section class="section product-detail">
+      <div class="details container-md">
+        <div class="left">
+          <div class="main">
+            <img src="images/lips6.jpeg" alt="" />
+          </div>
+          <div class="thumbnails">
+            <div class="thumbnail">
+              <img src="images/lips1.jpeg" alt="" />
+            </div>
+            <div class="thumbnail">
+              <img src="images/lips3.jpeg" alt="" />
+            </div>
+            <div class="thumbnail">
+              <img src="images/lips4.jpeg" alt="" />
+            </div>
+            <div class="thumbnail">
+              <img src="images/lips5.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <span>Home/MAYBELLINE</span>
+          <h1>MAYBELLINE Lipstick</h1>
+
+          <div class="container">
+            <div class="row">
+              <h2>Select a file to upload</h2>
+              <!-- Form-->
+              <form
+                action="/upload"
+                enctype="multipart/form-data"
+                method="post"
+              >
+                <div class="form-group">
+                  <label for="upload-image-file"></label>
+                  <input
+                    type="file"
+                    class="form-control-file"
+                    name="upload"
+                    id="upload"
+                    placeholder="upload-image-file"
+                    aria-describedby="fileHelpId"
+                  />
+                  <small id="fileHelpId" class="form-text text-muted"
+                    >Please select an image you want to try prouduct on and then
+                    click upload...</small
+                  >
+                </div>
+                <br />
+                <button
+                  type="submit"
+                  class="btn-lg btn-success"
+                  value="Upload"
+                  style="margin-bottom: 15px"
+                >
+                  Upload
+                </button>
+                <br />
+                <p><img id="output" src="<%= imagelink %>" width="400" /></p>
+              </form>
+              <!-- Form end-->
+              <!-- ml api test -->
+              <button
+                type="button"
+                class="btn btn-primary btn-lg tryon"
+                style="font-size: 18px; margin-bottom: 25px"
+              >
+                Try On!
+              </button>
+              <br />
+              <img id="testing" src="" />
+            </div>
+          </div>
+          <br />
+          <h3>Product Detail</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
+            delectus nulla voluptates nesciunt quidem laudantium, quisquam
+            voluptas facilis dicta in explicabo, laboriosam ipsam suscipit!
+          </p>
+          <button
+            type="button"
+            class="
+              btn btn-success
+              orderbutton
+              btn-lg btn-block btn-blockfloat-right
+            "
+            style="font-size: 18px; margin-top: 25px"
+          >
+            Place Order
+          </button>
+        </div>
+      </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <div id="modal-content">
+          <h3>YAYY!! Your order has been placed</h3>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // MlMedia api
+      function mlapifunc() {
+        console.log("inside mlapi");
+        const link = document.getElementById("output").src;
+
+        //mlmediaapifetch
+        let formData = new FormData();
+        //api fetch
+        formData.append(
+          "style",
+          "https://res.cloudinary.com/rapidhack/image/upload/v1636553804/parwin_final_gcis2j.jpg"
+        );
+        formData.append("img", link);
+        formData.append("type", "1");
+
+        // Yaha se ml api ko humlog api fetch kar rhe
+        const api1ml = fetch("http://3.128.236.248/api", {
+          method: "POST",
+          mode: "no-cors",
+          cache: "no-cache",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "form-data",
+          },
+          body: formData,
+        })
+          .then((data) => {
+            console.log(data);
+            document.getElementById("testing").src =
+              "  http://3.128.236.248/result/";
+          })
+          .catch((e) => {
+            console.log("Error getting document:", e);
+          });
+      }
+      //try on
+      const tryon = document.querySelector(".tryon");
+      tryon.addEventListener("click", mlapifunc);
+
+      //place order
+      async function rcstextapicall(phone, text) {
+        const update = {
+          type: "text",
+          phone_no: `${phone}`,
+          bot_name: "Routemobile",
+          text: `${text}`,
+        };
+        const options = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "6188c2110fcc5f00129106d7",
+          },
+          body: JSON.stringify(update),
+        };
+        try {
+          const response = await fetch(
+            "https://rapidapi.rmlconnect.net/rcs/v1/message",
+            options
+          );
+          // let user = await response.json();
+          // console.log("success rcstext "+user);
+          return response;
+        } catch (e) {
+          console.log("errror rcstext " + e);
+        }
+      }
+      async function rcsmediapicall(phone, text) {
+        const update = {
+          type: "media",
+          phone_no: `${phone}`,
+          bot_name: "Routemobile",
+          url: `${text}`,
+        };
+        const options = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "6188c2110fcc5f00129106d7",
+          },
+          body: JSON.stringify(update),
+        };
+        try {
+          const response = await fetch(
+            "https://rapidapi.rmlconnect.net/rcs/v1/message",
+            options
+          );
+          // let user = await response.json();
+          // console.log("success rcsmedia "+user);
+          return response;
+        } catch (e) {
+          console.log("error rcsmedia " + e);
+        }
+      }
+
+      async function func() {
+        const num = Math.floor(1000 + Math.random() * 9000);
+        console.log(num);
+        let phone = prompt("Type your number here");
+        await rcstextapicall(phone, num);
+        console.log("after otp message");
+        let otpconf = prompt("type otp sent to your number");
+        if (otpconf == num) {
+          // Get the modal
+          var modal = document.getElementById("myModal");
+          var modalcontent = document.getElementById("modal-content");
+          // When the user clicks the button, open the modal
+          modal.style.display = "block";
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          };
+          const d = new Date();
+          const months = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+          ];
+          // media message
+          const confirmmessage = `Confirmed: Thank you for shopping with us. We're prepping your order with 1 Sensational Lipstick. In these tough times, our team is working hard while ensuring highest safety standards, deliveries may take longer than usual. Your order ending 04801 is expected to be delivered by ${
+            (d.getDate() % 31) + 4
+          } ${months[d.getMonth()]}. Stay Home, Stay Safe. - Team Route mobile`;
+
+          const urlimg =
+            "https://rukminim1.flixcart.com/image/416/416/kr2e3680/lipstick/v/o/e/7-sensational-liquid-matte-lipstick-22-peach-addict-7-g-liquid-original-imag4y2tafnk5d5z.jpeg";
+
+          await rcsmediapicall(phone, urlimg);
+          await rcstextapicall(phone, confirmmessage);
+        } else confirm("incorrect otp");
+      }
+
+      //place order
+      const btn = document.querySelector(".orderbutton");
+      btn.addEventListener("click", func);
+    </script>
+  </body>
+</html>

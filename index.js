@@ -42,17 +42,17 @@ setInterval(function func() {
 app.get("/", (req, res) => {
   //carousel change
   const obj = {
-    latestprod0imagelink: "images/banner.png",
-    prod0head: "Product Sale for dress",
-    prod0details: "sale is on for dress",
+    latestprod0imagelink: "images/sale3.jpg",
+    prod0head: "",
+    prod0details: "",
     prod0color: "black",
-    latestprod1imagelink: "images/pic31.jpeg",
-    prod1head: "sale biggest sale",
-    prod1details: "quality lakme cream",
+    latestprod1imagelink: "images/sale1.jpg",
+    prod1head: "",
+    prod1details: "",
     prod1color: "black",
-    latestprod2imagelink: "images/banner.jpg",
-    prod2head: "New summer trend",
-    prod2details: "Buy cotton clothes in cheap 50% off",
+    latestprod2imagelink: "images/sale2.jpg",
+    prod2head: "",
+    prod2details: "",
     prod2color: "white",
   };
   res.render("index", obj);

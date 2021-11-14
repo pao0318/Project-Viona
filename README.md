@@ -21,6 +21,7 @@ Contents
 3. Open the localhost link.
 
 `.env file hasnt been pushed`
+<br/>
 You can provide your own env file of your cloudinary account and specifying details in the given format`
 CLOUD_NAME=
 <br/>

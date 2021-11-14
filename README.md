@@ -22,8 +22,11 @@ Contents
 
 `.env file hasnt been pushed . You can provide your own env file of your cloudinary account and specifying details in the given format`
 CLOUD_NAME=
+<br/>
 API_KEY=
+<br/>
 API_SECRET=
+<br/>
 
 
 ### Tech Stacks Used

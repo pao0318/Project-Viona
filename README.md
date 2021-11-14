@@ -46,13 +46,15 @@ API_SECRET=
 
 ### API Used
 ---
-1. RCS Notification API <br/>
+<ol>
+<li>RCS Notification API <br/>
 We confirm users' numbers by sending them an auto-generated OTP using RCS text API while placing the order; if the OTP matches, we complete the order and give them a confirmation message with a snapshot of the product
 <br/>
-2. WBS API
+<li>WBS API
 <br/>
 We've given users the option of utilising Whatsapp to communicate with us about their concerns, and we'll respond using Route mobile's Watsapp callback API and session API.
 <br/>
-3. SMS API
+<li>SMS API
 <br/>
 We are using the JavaScript set interval function and fetch API method to send asynchronous messages to all of our customers (whitelisted numbers). We're reminding them about the best deals available using route mobile's SMS API.
+</ol>

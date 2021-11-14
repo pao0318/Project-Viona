@@ -38,12 +38,13 @@ API_SECRET=
 1. Node
 2. Express
 3. Javascript
-4. Pytorch
-5. Keras
-6. AWS
-7. Azure
-8. Unity
-9. C#
+4. EJS
+5. Pytorch
+6. Keras
+7. AWS
+8. Azure
+9. Unity
+10. C#
 
 ### API Used
 ---

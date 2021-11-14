@@ -20,7 +20,8 @@ Contents
     + `$ node index.js
 3. Open the localhost link.
 
-`.env file hasnt been pushed . You can provide your own env file of your cloudinary account and specifying details in the given format`
+`.env file hasnt been pushed`
+You can provide your own env file of your cloudinary account and specifying details in the given format`
 CLOUD_NAME=
 <br/>
 API_KEY=

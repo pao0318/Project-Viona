@@ -46,9 +46,7 @@ When a user selects the customer service button, an auto-generated message is se
 <br/>
 We are using the JavaScript set interval function and fetch API method to send asynchronous messages to all of our customers (whitelisted numbers). We're reminding them about the best deals available using route mobile's SMS API.
 <br/>
-<li>
-<br/>
-WBS Message Callback URL
+<li>WBS Message Callback URL
 <br/>
 We've given users the option of utilising Whatsapp to communicate with us about their concerns, and we'll respond using WBS Message Callback URL and WhtasApp session API.
 <br/>    

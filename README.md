@@ -22,7 +22,8 @@ Contents
 
 `.env file hasnt been pushed`
 <br/>
-You can provide your own env file of your cloudinary account and specifying details in the given format`
+You can provide your own env file of your cloudinary account and specifying details in the given format.
+<br/>
 CLOUD_NAME=
 <br/>
 API_KEY=

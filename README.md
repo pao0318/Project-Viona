@@ -2,7 +2,6 @@
 ### `THEME : E-COMMERCE & RETAIL`
 
 `Project-Viona` is a platform that enables users to try out products, from the comfort of their own home. <br/>
-<br/>
 Presented by <b>Team Mozzarella</b>
 
 

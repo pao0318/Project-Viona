@@ -16,8 +16,8 @@ Contents
 
 1. Clone the repository
 2. Open with code editor and run following commands on the terminal.
-    + `$ npm install 
-    + `$ node index.js
+    + ` npm install 
+    + ` node index.js
 3. Open the localhost link.
 
 `.env file hasnt been pushed`

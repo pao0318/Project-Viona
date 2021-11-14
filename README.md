@@ -1,6 +1,6 @@
 # Projec-Viona
 
-`Projec-Viona` is a platform that enables users to try out products, from the comfort of their own home.
+`Projec-Viona` is a platform that enables users to try out products, from the comfort of their own home. <br/>
 Presented by <b>Team Mozzarella</b>
 
 

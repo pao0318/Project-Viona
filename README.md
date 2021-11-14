@@ -1,7 +1,7 @@
-# Project-Viona
+# Project-Viona : `THEME : E-COMMERCE & RETAIL`
 
 `Project-Viona` is a platform that enables users to try out products, from the comfort of their own home. <br/>
-`THEME : E-COMMERCE & RETAIL` <br/>
+<br/>
 Presented by <b>Team Mozzarella</b>
 
 

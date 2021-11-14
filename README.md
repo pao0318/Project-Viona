@@ -1,6 +1,6 @@
-# Projec-Viona
+# Project-Viona
 
-`Projec-Viona` is a platform that enables users to try out products, from the comfort of their own home. <br/>
+`Project-Viona` is a platform that enables users to try out products, from the comfort of their own home. <br/>
 Presented by <b>Team Mozzarella</b>
 
 
@@ -8,7 +8,6 @@ Contents
 ========
 
  * [Installation](#installation)
- * [Tech Stacks Used](#Tech-Stacks-Used)
  * [API Used](#API-Used)
 
 
@@ -33,19 +32,6 @@ API_SECRET=
 <br/>
 
 
-### Tech Stacks Used
----
-1. Node
-2. Express
-3. Javascript
-4. EJS
-5. Pytorch
-6. Keras
-7. AWS
-8. Azure
-9. Unity
-10. C#
-
 ### API Used
 ---
 <ol>
@@ -59,4 +45,9 @@ We've given users the option of utilising Whatsapp to communicate with us about 
 <li>SMS API
 <br/>
 We are using the JavaScript set interval function and fetch API method to send asynchronous messages to all of our customers (whitelisted numbers). We're reminding them about the best deals available using route mobile's SMS API.
+<br/>
+<li>ML API
+ <br/>
+We hosted our Makeup GAN Model at aws ec2 p2.2xlarge instance with K80 Tesla GPU and NVIDIA CUDA .The api passes the received arguments to the MLmodel.
+The final generated image is then displayed on the client side.
 </ol>

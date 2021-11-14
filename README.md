@@ -46,7 +46,6 @@ API_SECRET=
 
 ### API Used
 ---
-
 1. RCS Notification API <br/>
 We confirm users' numbers by sending them an auto-generated OTP using RCS text API while placing the order; if the OTP matches, we complete the order and give them a confirmation message with a snapshot of the product
 <br/>
